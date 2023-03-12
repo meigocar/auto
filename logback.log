@@ -1,0 +1,317 @@
+21:18:20.193 [main] INFO  com.mei.auto.AutoApplication - Starting AutoApplication using Java 19.0.2 with PID 68765 (/Users/mei/IdeaProjects/auto/target/classes started by mei in /Users/mei/IdeaProjects/auto)
+21:18:20.195 [main] INFO  com.mei.auto.AutoApplication - The following 1 profile is active: "production"
+21:18:20.899 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:18:20.907 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:18:20.907 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:18:20.908 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+21:18:20.997 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:18:20.998 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 770 ms
+21:18:21.303 [Thread-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.32.2 (resolved driver for Firefox 110)
+21:18:21.311 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+21:18:21.346 [Thread-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/mei/.cache/selenium/geckodriver/mac64/0.32.2/geckodriver
+21:18:21.691 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:18:21.707 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+21:18:21.708 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+21:18:21.709 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@43245559]]
+21:18:21.710 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+21:18:21.718 [main] INFO  com.mei.auto.AutoApplication - Started AutoApplication in 1.89 seconds (process running for 2.75)
+21:19:21.228 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+21:30:28.519 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+21:30:28.519 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@43245559]]
+21:30:28.520 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+21:30:34.306 [main] INFO  com.mei.auto.AutoApplication - Starting AutoApplication using Java 19.0.2 with PID 68829 (/Users/mei/IdeaProjects/auto/target/classes started by mei in /Users/mei/IdeaProjects/auto)
+21:30:34.308 [main] INFO  com.mei.auto.AutoApplication - The following 1 profile is active: "production"
+21:30:35.094 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:30:35.108 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:30:35.108 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:30:35.109 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+21:30:35.183 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:30:35.183 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 836 ms
+21:30:35.481 [Thread-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.32.2 (resolved driver for Firefox 110)
+21:30:35.486 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+21:30:35.527 [Thread-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/mei/.cache/selenium/geckodriver/mac64/0.32.2/geckodriver
+21:30:35.869 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+21:30:35.870 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+21:30:35.871 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@562919fe]]
+21:30:35.871 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+21:30:35.879 [main] INFO  com.mei.auto.AutoApplication - Started AutoApplication in 1.895 seconds (process running for 2.675)
+21:30:35.880 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+21:30:35.880 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@562919fe]]
+21:30:35.880 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+21:33:52.728 [main] INFO  com.mei.auto.AutoApplication - Starting AutoApplication using Java 19.0.2 with PID 68849 (/Users/mei/IdeaProjects/auto/target/classes started by mei in /Users/mei/IdeaProjects/auto)
+21:33:52.730 [main] INFO  com.mei.auto.AutoApplication - The following 1 profile is active: "production"
+21:33:53.370 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:33:53.378 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:33:53.379 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:33:53.379 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+21:33:53.463 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:33:53.464 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 701 ms
+21:33:53.719 [Thread-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.32.2 (resolved driver for Firefox 110)
+21:33:53.729 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+21:33:53.758 [Thread-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/mei/.cache/selenium/geckodriver/mac64/0.32.2/geckodriver
+21:33:54.082 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:33:54.096 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+21:33:54.098 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+21:33:54.098 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@42e4e589]]
+21:33:54.099 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+21:33:54.107 [main] INFO  com.mei.auto.AutoApplication - Started AutoApplication in 1.659 seconds (process running for 2.353)
+21:34:23.291 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:34:23.292 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:34:23.293 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+21:34:53.637 [MessageBroker-8] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 9, active threads = 0, queued tasks = 0, completed tasks = 9], outboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 62], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 2, completed tasks = 6]
+21:37:18.931 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+21:37:18.932 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@42e4e589]]
+21:37:18.933 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+21:37:25.335 [main] INFO  com.mei.auto.AutoApplication - Starting AutoApplication using Java 19.0.2 with PID 68881 (/Users/mei/IdeaProjects/auto/target/classes started by mei in /Users/mei/IdeaProjects/auto)
+21:37:25.337 [main] INFO  com.mei.auto.AutoApplication - The following 1 profile is active: "production"
+21:37:26.039 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:37:26.047 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:37:26.047 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:37:26.047 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+21:37:26.122 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:37:26.123 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 751 ms
+21:37:26.412 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+21:37:26.414 [Thread-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.32.2 (resolved driver for Firefox 110)
+21:37:26.455 [Thread-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/mei/.cache/selenium/geckodriver/mac64/0.32.2/geckodriver
+21:37:26.788 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:37:26.803 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+21:37:26.805 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+21:37:26.805 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@413d2cd1]]
+21:37:26.806 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+21:37:26.814 [main] INFO  com.mei.auto.AutoApplication - Started AutoApplication in 1.784 seconds (process running for 2.468)
+21:37:38.265 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:37:38.266 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:37:38.267 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+21:38:07.382 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracelVps windowInit try to lock
+21:38:07.383 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracelVps windowInit locked
+21:38:09.559 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracelVps windowInit release Lock
+21:38:09.559 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracelVps login try to lock
+21:38:09.559 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracelVps login locked
+21:38:13.725 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - login step 1 before
+21:38:14.174 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - login step 1 success
+21:38:17.177 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - pageTitle:Oracle Cloud Infrastructure
+21:38:17.182 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - login steping 2 before
+21:38:26.309 [MessageBroker-5] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 15, active threads = 0, queued tasks = 0, completed tasks = 15], outboundChannel[pool size = 24, active threads = 0, queued tasks = 0, completed tasks = 57], sockJsScheduler[pool size = 12, active threads = 1, queued tasks = 2, completed tasks = 9]
+21:38:47.203 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - login fail, replay:0
+21:38:47.204 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracelVps windowInit release Lock
+21:38:47.204 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracelVps login try to lock
+21:38:47.204 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracelVps login locked
+21:38:49.405 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - login step 1 before
+21:38:49.674 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - login step 1 success
+21:38:52.686 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - pageTitle:Oracle Cloud Infrastructure | Sign In
+21:38:52.693 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - login steping 2 before
+21:38:52.720 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - login steping 2
+21:38:52.745 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - login step 2 sucess
+21:39:10.009 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - login enter username,pass
+21:39:10.523 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - login finish
+21:39:19.072 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - logined success!!!
+21:39:19.073 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracelVps windowInit release Lock
+21:39:19.073 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracelVps oracleA1 try to lock
+21:39:19.073 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracelVps oracleA1 locked
+21:40:16.082 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracleVps oracleA1 release Lock
+21:40:16.083 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracleVps press button try lock
+21:40:18.769 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracleVps press button release lock
+21:40:18.770 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - 可用性域 AD-1 中配置 VM.Standard.A1.Flex 的容量不足。请在其他可用性域中创建实例，或稍后重试。 如果指定了容错域，请尝试在不指定容错域的情况下创建实例。如果这样不起作用，请稍后重试。 了解有关主机容量的更多信息。
+21:40:18.770 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracleVps, 2023-03-09 21:40:18, past: 0:2, cost:172, suc:1 || fail:0 || win:0
+21:40:30.593 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracleVps press button try lock
+21:40:31.870 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracleVps press button release lock
+21:40:31.870 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - 可用性域 AD-1 中配置 VM.Standard.A1.Flex 的容量不足。请在其他可用性域中创建实例，或稍后重试。 如果指定了容错域，请尝试在不指定容错域的情况下创建实例。如果这样不起作用，请稍后重试。 了解有关主机容量的更多信息。
+21:40:31.871 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracleVps, 2023-03-09 21:40:31, past: 0:3, cost:13, suc:2 || fail:0 || win:0
+21:40:41.925 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracleVps press button try lock
+21:40:42.265 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracleVps press button release lock
+21:40:42.265 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - Too many requests for the user
+21:40:42.265 [pool-1-thread-1] INFO  com.mei.auto.component.DIDIFLJ - oracleVps, 2023-03-09 21:40:42, past: 0:3, cost:10, suc:3 || fail:0 || win:0
+21:40:51.817 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+21:40:51.818 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@413d2cd1]]
+21:40:51.818 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+21:30:22.345 [main] INFO  com.mei.auto.AutoApplication - Starting AutoApplication using Java 19.0.2 with PID 6667 (/Users/mei/IdeaProjects/auto/target/classes started by mei in /Users/mei/IdeaProjects/auto)
+21:30:22.349 [main] INFO  com.mei.auto.AutoApplication - The following 1 profile is active: "production"
+21:30:23.210 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:30:23.229 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:30:23.230 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:30:23.230 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+21:30:23.322 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:30:23.323 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 922 ms
+21:30:23.681 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+21:30:24.108 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:30:24.124 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+21:30:24.126 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+21:30:24.126 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2bb62414]]
+21:30:24.127 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+21:30:24.135 [main] INFO  com.mei.auto.AutoApplication - Started AutoApplication in 2.161 seconds (process running for 3.537)
+21:30:25.565 [Thread-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 110.0.5481.77 (resolved driver for Chrome 110)
+21:30:25.583 [Thread-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/mei/.cache/selenium/chromedriver/mac64/110.0.5481.77/chromedriver
+21:30:56.854 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+21:30:56.855 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2bb62414]]
+21:30:56.855 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+21:31:00.474 [main] INFO  com.mei.auto.AutoApplication - Starting AutoApplication using Java 19.0.2 with PID 6687 (/Users/mei/IdeaProjects/auto/target/classes started by mei in /Users/mei/IdeaProjects/auto)
+21:31:00.476 [main] INFO  com.mei.auto.AutoApplication - The following 1 profile is active: "production"
+21:31:01.278 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+21:31:01.294 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+21:31:01.295 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+21:31:01.295 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+21:31:01.385 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+21:31:01.386 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 872 ms
+21:31:01.704 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+21:31:02.087 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+21:31:02.102 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+21:31:02.103 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+21:31:02.104 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@413d2cd1]]
+21:31:02.105 [main] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+21:31:02.112 [main] INFO  com.mei.auto.AutoApplication - Started AutoApplication in 1.987 seconds (process running for 2.735)
+21:31:03.910 [Thread-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.32.2 (resolved driver for Firefox 110)
+21:31:03.926 [Thread-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as /Users/mei/.cache/selenium/geckodriver/mac64/0.32.2/geckodriver
+21:31:57.591 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+21:31:57.593 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+21:31:57.595 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+21:32:01.590 [MessageBroker-1] INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[1 current WS(1)-HttpStream(0)-HttpPoll(0), 1 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(1)-CONNECTED(1)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 6], outboundChannel[pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1], sockJsScheduler[pool size = 5, active threads = 1, queued tasks = 2, completed tasks = 1]
+21:32:07.649 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps windowInit try to lock
+21:32:07.651 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps windowInit locked
+21:32:15.656 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps windowInit release Lock
+21:32:15.657 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps login try to lock
+21:32:15.658 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps login locked
+21:32:16.589 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - login step 1 before
+21:32:16.602 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - login fail, replay:0
+21:32:16.603 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps windowInit release Lock
+21:32:16.603 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps login try to lock
+21:32:16.603 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps login locked
+21:32:17.481 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - login step 1 before
+21:32:17.487 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - login fail, replay:1
+21:32:17.491 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps windowInit release Lock
+21:32:17.492 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps login try to lock
+21:32:17.492 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps login locked
+21:32:18.316 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - login step 1 before
+21:32:18.322 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - login fail, replay:2
+21:32:18.322 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps windowInit release Lock
+21:32:18.323 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps login try to lock
+21:32:18.323 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps login locked
+21:32:21.986 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - login step 1 before
+21:32:22.238 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - login step 1 success
+21:32:25.244 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - pageTitle:Oracle Cloud Infrastructure
+21:32:25.249 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - login steping 2 before
+21:32:30.715 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - login steping 2
+21:32:30.744 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - login step 2 sucess
+21:32:41.601 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - login enter username,pass
+21:32:42.150 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - login finish
+21:32:49.487 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - logined success!!!
+21:32:49.488 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps windowInit release Lock
+21:32:49.489 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps oracleA1 try to lock
+21:32:49.489 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps oracleA1 locked
+21:33:39.401 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps oracleA1 release Lock
+21:33:39.401 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps press button try lock
+21:33:42.717 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps press button release lock
+21:33:42.717 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - 可用性域 AD-1 中配置 VM.Standard.A1.Flex 的容量不足。请在其他可用性域中创建实例，或稍后重试。 如果指定了容错域，请尝试在不指定容错域的情况下创建实例。如果这样不起作用，请稍后重试。 了解有关主机容量的更多信息。
+21:33:42.718 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps, 2023-03-12 21:33:42, past: 0:2, cost:161, suc:1 || fail:0 || win:0
+21:33:57.109 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps press button try lock
+21:33:57.520 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps press button release lock
+21:33:57.521 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - Too many requests for the user
+21:33:57.521 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps, 2023-03-12 21:33:57, past: 0:2, cost:14, suc:2 || fail:0 || win:0
+21:34:10.124 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps press button try lock
+21:34:11.959 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps press button release lock
+21:34:11.960 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - 可用性域 AD-1 中配置 VM.Standard.A1.Flex 的容量不足。请在其他可用性域中创建实例，或稍后重试。 如果指定了容错域，请尝试在不指定容错域的情况下创建实例。如果这样不起作用，请稍后重试。 了解有关主机容量的更多信息。
+21:34:11.960 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps, 2023-03-12 21:34:11, past: 0:3, cost:14, suc:3 || fail:0 || win:0
+21:34:24.169 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps press button try lock
+21:34:25.492 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps press button release lock
+21:34:25.492 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - 可用性域 AD-1 中配置 VM.Standard.A1.Flex 的容量不足。请在其他可用性域中创建实例，或稍后重试。 如果指定了容错域，请尝试在不指定容错域的情况下创建实例。如果这样不起作用，请稍后重试。 了解有关主机容量的更多信息。
+21:34:25.493 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps, 2023-03-12 21:34:25, past: 0:3, cost:13, suc:4 || fail:0 || win:0
+21:34:39.823 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps press button try lock
+21:34:40.566 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps press button release lock
+21:34:40.566 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - Too many requests for the user
+21:34:40.566 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracleVps, 2023-03-12 21:34:40, past: 0:3, cost:15, suc:5 || fail:0 || win:0
+21:34:42.589 [http-nio-8080-exec-10] INFO  com.mei.auto.component.OracleA1V4 - oracelVps close try to lock
+21:34:42.590 [http-nio-8080-exec-10] INFO  com.mei.auto.component.OracleA1V4 - oracelVps close locked
+21:34:42.698 [http-nio-8080-exec-10] INFO  com.mei.auto.component.OracleA1V4 - 关闭 oracle vps 浏览器
+21:34:42.699 [http-nio-8080-exec-10] INFO  com.mei.auto.component.OracleA1V4 - oracle vps release locked
+21:34:50.799 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps close try to lock
+21:34:50.800 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps close locked
+21:34:50.824 [pool-1-thread-1] INFO  com.mei.auto.component.OracleA1V4 - oracelVps process release lock
+21:35:22.993 [pool-1-thread-3] INFO  com.mei.auto.component.DIDIFLJ - DDFLJ init try lock
+21:35:24.158 [pool-1-thread-3] INFO  com.mei.auto.component.DIDIFLJ - ddflj token, hzjQTwFJV8Pnod6UZ9_3Cy8rr8ZKC5gI7eh56eJQb2wkzDmKw1AMgOG7_LUw0ttkqZ1-7jCLszQvkJDK-O4hpP7g25lKUhddFGEaacIsZFXVJsxKmvcobazhFv3NjVRhdpKvb4QfEoRfsqyjeYvVI6zWIfyTxYWN3Hncnve_jeyHcCJteK81Ilw4k5j7aN3NR0e4fM4rqccrAAD__w==
+21:35:31.515 [pool-1-thread-3] INFO  com.mei.auto.component.DIDIFLJ - DDFLJ release lock
+21:35:31.516 [pool-1-thread-3] INFO  com.mei.auto.component.DIDIFLJ - DDFLJ process try lock
+21:35:31.516 [pool-1-thread-3] INFO  com.mei.auto.component.DIDIFLJ - DDFLJ process locked
+21:36:07.775 [pool-1-thread-3] INFO  com.mei.auto.component.DIDIFLJ - 无签到弹窗！
+21:36:37.781 [pool-1-thread-3] INFO  com.mei.auto.component.DIDIFLJ - 无其他弹窗！
+21:36:38.578 [pool-1-thread-3] INFO  com.mei.auto.component.DIDIFLJ - 点立即报名
+21:36:40.606 [pool-1-thread-3] INFO  com.mei.auto.component.DIDIFLJ - 确认报名
+21:36:41.658 [pool-1-thread-3] INFO  com.mei.auto.component.DIDIFLJ - 报名成功，关窗口
+21:36:42.164 [pool-1-thread-3] INFO  com.mei.auto.component.DIDIFLJ - 本轮结束！！！！
+21:36:42.165 [pool-1-thread-3] INFO  com.mei.auto.component.DIDIFLJ - DDFLJ process release locked
+21:36:42.165 [pool-1-thread-3] INFO  com.mei.auto.component.DIDIFLJ - DDFLJ init try lock
+21:36:42.204 [http-nio-8080-exec-4] INFO  com.mei.auto.component.DIDIFLJ - 关闭福利金浏览器
+21:36:42.241 [pool-1-thread-3] INFO  com.mei.auto.component.DIDIFLJ - DDFLJ release lock
+21:36:58.736 [http-nio-8080-exec-5] INFO  com.mei.auto.component.Qiandao - 关闭 签到 浏览器
+21:36:58.744 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: java.lang.NullPointerException: null value in entry: handle=null] with root cause
+java.lang.NullPointerException: null value in entry: handle=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
+	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:43)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:81)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:128)
+	at org.openqa.selenium.remote.DriverCommand.SWITCH_TO_WINDOW(DriverCommand.java:266)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.window(RemoteWebDriver.java:1034)
+	at com.mei.auto.component.Qiandao.close(Qiandao.java:114)
+	at com.mei.auto.AutoDispatcher.closeQianDao(AutoDispatcher.java:67)
+	at com.mei.auto.controller.QiandoController.oracleVps(QiandoController.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:705)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+21:37:04.007 [pool-1-thread-4] INFO  com.mei.auto.component.Qiandao - qiando start try to lock
+21:37:04.163 [pool-1-thread-4] INFO  com.mei.auto.component.Qiandao - qiando start release locked
+21:37:04.211 [pool-1-thread-4] INFO  com.mei.auto.component.Qiandao - qiando try to lock
+21:37:04.212 [pool-1-thread-4] INFO  com.mei.auto.component.Qiandao - qiando locked
+21:37:08.001 [pool-1-thread-4] INFO  com.mei.auto.component.Qiandao - qiando release lock
+21:37:08.002 [pool-1-thread-4] INFO  com.mei.auto.component.Qiandao - token,71eNU34Kg5, click now! Sun Mar 12 21:37:08 CST 2023
+21:37:10.004 [pool-1-thread-4] INFO  com.mei.auto.component.Qiandao - qiando try to lock
+21:37:10.005 [pool-1-thread-4] INFO  com.mei.auto.component.Qiandao - qiando locked
+21:37:11.773 [pool-1-thread-4] INFO  com.mei.auto.component.Qiandao - qiando release lock
+21:37:11.774 [pool-1-thread-4] INFO  com.mei.auto.component.Qiandao - token,hzjQTwFJV8, click now! Sun Mar 12 21:37:11 CST 2023
+21:37:23.777 [pool-1-thread-4] INFO  com.mei.auto.component.Qiandao - qiandao wait click, 2023-03-12 21:37:23, left: 7:59:50
+21:37:33.780 [pool-1-thread-4] INFO  com.mei.auto.component.Qiandao - qiandao wait click, 2023-03-12 21:37:33, left: 7:59:40
+21:37:40.532 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+21:37:40.532 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@413d2cd1]]
+21:37:40.532 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.

@@ -1,0 +1,12 @@
+2023/03/06-21:41:39.105 8007 Reusing MANIFEST /Users/mei/IdeaProjects/auto/files/chrome/Default/IndexedDB/https_cloud.oracle.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/03/06-21:41:39.106 8007 Recovering log #352
+2023/03/06-21:41:39.120 8007 Reusing old log /Users/mei/IdeaProjects/auto/files/chrome/Default/IndexedDB/https_cloud.oracle.com_0.indexeddb.leveldb/000352.log 
+2023/03/06-21:42:58.589 8007 Level-0 table #357: started
+2023/03/06-21:42:58.632 8007 Level-0 table #357: 1134991 bytes OK
+2023/03/06-21:42:58.696 8007 Delete type=0 #352
+2023/03/06-21:42:58.791 8803 Compacting 1@1 + 1@2 files
+2023/03/06-21:42:58.903 8803 Generated table #358@1: 586 keys, 69220 bytes
+2023/03/06-21:42:58.903 8803 Compacted 1@1 + 1@2 files => 69220 bytes
+2023/03/06-21:42:58.946 8803 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/03/06-21:42:58.947 8803 Delete type=2 #357
+2023/03/06-21:42:58.947 8803 Delete type=2 #354
