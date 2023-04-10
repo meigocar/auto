@@ -10,12 +10,8 @@ import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
@@ -35,9 +31,7 @@ import org.springframework.stereotype.Service;
 public class DIDIFLJ {
     private static final Logger LOGGER = LoggerFactory.getLogger(DIDIFLJ.class);
     @Value("${dd.token}")
-    String token;
-    @Value("${dd.token2}")
-    String token2;
+    String[] tokens;
     final String indexURL = "https://page.udache.com/ut-webx/ut-welfarecenter/index.html#/index";
     WebDriverWait checkWait;
     int waitSecond = 3;
@@ -51,7 +45,6 @@ public class DIDIFLJ {
     public void start() throws Exception {
         if (!this.status) {
             this.status = true;
-            List<String> tokens = List.of(this.token, this.token2);
             Date before = new Date();
             boolean first = true;
 
@@ -64,7 +57,7 @@ public class DIDIFLJ {
                     long s = left % 60L;
                     LOGGER.info(String.format("didiFLJ %s, left: %d:%d:%d", format.format(now), h, m, s));
                 } else {
-                    tokens.stream().forEach((token) -> {
+                    Arrays.stream(tokens).forEach((token) -> {
                         int i = 0;
 
                         while(this.status && i < 3) {

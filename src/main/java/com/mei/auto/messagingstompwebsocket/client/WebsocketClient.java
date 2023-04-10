@@ -25,6 +25,6 @@ public class WebsocketClient {
     }
 
     public void sendMsg(String msg) {
-        this.messagingTemplate.convertAndSend("/topic/greetings", new Greeting(HtmlUtils.htmlEscape(msg)));
+//        this.messagingTemplate.convertAndSend("/topic/greetings", new Greeting(HtmlUtils.htmlEscape(msg)));
     }
 }

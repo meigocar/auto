@@ -6,9 +6,11 @@
 package com.mei.auto.component;
 
 import com.mei.auto.component.util.LockService;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
@@ -26,9 +28,7 @@ public class Qiandao {
     @Value("${qiandao.url}")
     String url;
     @Value("${dd.token}")
-    String token;
-    @Value("${dd.token2}")
-    String token2;
+    String[] tokens;
     boolean status;
     String windowTag;
 
@@ -49,7 +49,7 @@ public class Qiandao {
             DriverService.js.executeScript("window.sessionStorage.clear() ; window.localStorage.setItem(arguments[0],arguments[1])", new Object[]{"didih5_trinity_login_ticket", token});
             Thread.sleep(1000L);
             DriverService.driver.get(this.url);
-            ((WebElement)DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".sign-btn")))).click();
+            ((WebElement) DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".sign-btn")))).click();
         } finally {
             LockService.DRIVERLOCK.unlock();
             logger.info("qiando release lock");
@@ -78,7 +78,7 @@ public class Qiandao {
             Date before = new Date();
             boolean first = true;
 
-            for(DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); this.status; Thread.sleep(10000L)) {
+            for (DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"); this.status; Thread.sleep(10000L)) {
                 Date now = new Date();
                 long left = 28800L - (now.getTime() - before.getTime()) / 1000L;
                 if (left > 0L && !first) {
@@ -94,8 +94,8 @@ public class Qiandao {
                     }
 
                     try {
-                        this.qiandao(this.token2);
-                        this.qiandao(this.token);
+                        for (String token : tokens)
+                            qiandao(token);
                     } catch (Exception var17) {
                         var17.printStackTrace();
                     }
