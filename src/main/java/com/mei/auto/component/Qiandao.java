@@ -43,22 +43,23 @@ public class Qiandao {
             if (!DriverService.driver.getWindowHandle().equals(this.windowTag)) {
                 DriverService.driver.switchTo().window(this.windowTag);
             }
-
+            var oldTag = DriverService.driver.getWindowHandle();
+            windowTag = DriverService.driver.switchTo().newWindow(WindowType.TAB).getWindowHandle();
+            DriverService.driver.switchTo().window(oldTag).close();
+            DriverService.driver.switchTo().window(windowTag);
             DriverService.driver.get(this.url);
             DriverService.driver.manage().window().setPosition(new Point(10, 10));
-            DriverService.js.executeScript("window.sessionStorage.clear() ; window.localStorage.setItem(arguments[0],arguments[1])", new Object[]{"didih5_trinity_login_ticket", token});
+            DriverService.js.executeScript("window.sessionStorage.clear() ; window.localStorage.setItem(arguments[0],arguments[1])", "didih5_trinity_login_ticket", token);
             Thread.sleep(1000L);
             DriverService.driver.get(this.url);
-            ((WebElement) DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".sign-btn")))).click();
+            DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".sign-btn"))).click();
         } finally {
             LockService.DRIVERLOCK.unlock();
             logger.info("qiando release lock");
         }
 
         Date now = new Date();
-        Logger var10000 = logger;
-        String var10001 = token.substring(0, 10);
-        var10000.info("token," + var10001 + ", click now! " + String.valueOf(now));
+        logger.info("token," + token.substring(0, 10) + ", click now! " + now);
         Thread.sleep(2000L);
     }
 

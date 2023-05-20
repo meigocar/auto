@@ -69,6 +69,7 @@ public class DriverService {
                     WebDriverManager.chromedriver().setup();
                     options = new ChromeOptions();
                     options.addArguments(new String[]{"user-data-dir=" + this.chromeDir + "/chrome"});
+                    options.addArguments("--remote-allow-origins=*");
                     options.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking"));
                     driver = new ChromeDriver(options);
                 }

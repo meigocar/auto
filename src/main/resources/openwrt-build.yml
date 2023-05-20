@@ -1,0 +1,54 @@
+name: Build OpenWRT
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Update and Install Prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget curl swig rsync
+
+      - name: Clone additional packages
+        run: |
+          src-git kenzo https://github.com/kenzok8/openwrt-packages
+          src-git small https://github.com/kenzok8/small
+          ./scripts/feeds update -a
+          ./scripts/feeds install -a
+
+      - name: Configure Build System for X86
+        run: |
+          echo "CONFIG_TARGET_x86=y" > .config
+          echo "CONFIG_TARGET_x86_64=y" >> .config
+          echo "CONFIG_TARGET_IMAGES_GZIP=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-ath9k=y" >> .config
+          echo "CONFIG_PACKAGE_kmod-ath10k=y" >> .config
+
+      - name: Add Custom Software Packages
+        run: |
+          echo "CONFIG_PACKAGE_luci-app-passwall=y" >> .config
+          echo "CONFIG_PACKAGE_luci-app-helloworld=y" >> .config
+          echo "CONFIG_PACKAGE_luci-app-shadowrocketr-plus=y" >> .config
+
+      - name: Build OpenWRT
+        run: make -j$(nproc) download V=s
+
+      - name: Build OpenWRT
+        run: make -j$(nproc)
+
+      - name: Archive Production Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: openwrt-firmware
+          path: bin/targets/**/*
