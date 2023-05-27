@@ -9,7 +9,7 @@ email="mjc.88@126.com"
 
 # 获取当前IPv6地址
 #current_ipv6=$(curl http://ipv6.whatismyip.akamai.com)
-current_ipv6=$(ip -6 addr show dev eth0 | awk '/inet6 .* scope global/ {split($2, a, "/"); if (substr(a[1], 1, 5) == "2409:") print a[1]}')
+current_ipv6=$(ip -6 addr show dev br-lan | awk '/inet6 .* scope global/ {split($2, a, "/"); if (substr(a[1], 1, 5) == "2409:") print a[1]}')
 
 # 日志文件设置
 log_file="ddns.log"
