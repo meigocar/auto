@@ -10,6 +10,7 @@ import jakarta.annotation.PostConstruct;
 import jakarta.annotation.Resource;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -169,6 +170,10 @@ public class OracleA1V4 {
                 DriverService.wait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(vcnId, By.xpath("//option[. = 'vcn-20220115-0032']")));
                 vcnId.findElement(By.xpath("//option[. = 'vcn-20220115-0032']")).click();
 
+                //等待子网的值加载完成
+                var dropdown = DriverService.driver.findElement(By.name("subnetId"));
+                DriverService.wait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(dropdown,By.xpath("//option[text()='subnet-20220115-0032（区域）']")));
+
                 (DriverService.wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".oui-flex:nth-child(2) > .oui-margin-small-bottom:nth-child(3) .oui-form-label")))).click();
                 DriverService.driver.findElement(By.name("sshKey")).sendKeys(new CharSequence[]{"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAtURiRFDLWNmRgh5rxW1X/ko46eNIEAiIR3assoz7LGTYpwikAEIUM8ivvGB3R5OID3oTNnznHMuDHSBLIvuOHdB6lh8ej6myzYHq3tB32W2sUgsDGpcLsRa/HHEAceai4XrDm7etoPka3mf7yWE8x4YZHpgwjnmsd0GhMMtQcp/DywpWEvnIACRuWhY9Ygk5Rsxke2hczqtfa014VNB6WX6qvUhQANBNcOr9k/Gx6vuZ6IqPKGf/QQufa7+WlvLlfc6yUIK5dTIa5FhrogmM0Wqe65iuUegHoYlFErWFugMaSGvDW3SyA/tvAE7a6kCi7uF+xdb0Y1djhmEiZWyNHsItiZRuPmV+FOX6WhSDdpfJBJ9WV2+yiW3HZzFdGl4lQZQtDfEp4HS4ubg9C9v997zJtE/8pdqCVwkYAXReuPPPNeQ0TxkhllUBBVlyaKyou1xFbO8TqPY8eWpXcWnkqpLLGRg9KfHYRA7Adi3mO4FtutUbWUqtEdl86N/ImL0= mei@meijinnhundeMBP"});
             } finally {
@@ -271,12 +276,11 @@ public class OracleA1V4 {
                 }
 
                 DriverService.driver.get("https://www.oracle.com/cloud/sign-in.html");
-                WebElement cloudAccountName = DriverService.driver.findElement(By.id("cloudAccountName"));
+                WebElement cloudAccountName = DriverService.wait.until(ExpectedConditions.elementToBeClickable(By.id("cloudAccountName")));
                 cloudAccountName.clear();
                 cloudAccountName.sendKeys(new CharSequence[]{"mjc88"});
-                WebElement cloudAccountButton = (WebElement)DriverService.wait.until(ExpectedConditions.elementToBeClickable(By.id("cloudAccountButton")));
                 LOGGER.info("login step 1 before");
-                cloudAccountButton.click();
+                DriverService.wait.until(ExpectedConditions.elementToBeClickable(By.id("cloudAccountButton"))).click();
                 LOGGER.info("login step 1 success");
                 Thread.sleep(3000L);
                 LOGGER.info("pageTitle:" + DriverService.driver.getTitle());
