@@ -8,24 +8,20 @@ package com.mei.auto.component;
 import com.mei.auto.component.util.LockService;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.Resource;
-import java.io.PrintStream;
-import java.text.SimpleDateFormat;
-import java.time.Duration;
-import java.util.Map;
-import java.util.Random;
-import java.util.concurrent.ConcurrentHashMap;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WindowType;
-import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
+import java.io.PrintStream;
+import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.util.Map;
+import java.util.Random;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class OracleA1V4 {
@@ -151,45 +147,29 @@ public class OracleA1V4 {
                 }
 
                 DriverService.driver.get("https://cloud.oracle.com/compute/instances/create?region=ap-singapore-1");
+
+                //等待页面加载完成
                 DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.region-header-name-text")));
-                byte index;
-                if ("firefox".equals(this.webBrowser)) {
-                    index = 1;
-                } else {
-                    index = 0;
-                }
+                DriverService.wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("#sandbox-compute-container")));
+                DriverService.wait.until(ExpectedConditions.jsReturnsValue("return document.readyState='complete'"));
 
-                DriverService.wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(index));
-                DriverService.driver.switchTo().parentFrame().switchTo().frame(index);
-                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.oui-metadata-items__content")));
-                DriverService.driver.findElement(By.cssSelector(".oui-fieldset-default:nth-child(5) > .oui-legend-wrapper .oui-button")).click();
-                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".create-instance-dialog__picker-result__image-container > img")));
-                DriverService.driver.findElement(By.cssSelector(".create-instance-dialog__picker-result__button-container > .oui-button")).click();
-                ((WebElement)DriverService.wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".image-category:nth-child(2)")))).click();
-                ((WebElement)DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oui-table-row-default:nth-child(5) .oui-checkbox")))).click();
-                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oui-savant__Panel--medium .oui-button-primary")));
-                DriverService.driver.findElement(By.cssSelector(".oui-savant__Panel--medium .oui-button-primary")).click();
+                //点击image
+                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(2) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--large.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > div.fullscreen-two-thirds-width > div > fieldset:nth-child(6) > div.oui-legend-wrapper.oui-flex.oui-flex-between.oui-flex-top > div.oui-margin-left.oui-flex.oui-flex-top.oui-flex- > button"))).click();
+                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(2) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--large.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > div.fullscreen-two-thirds-width > div > fieldset:nth-child(6) > div.oui__fieldset-content.oui-fieldset-content-top-zero-padding > div:nth-child(1) > div.create-instance-dialog__picker-result.ux-exp-field-wrapper > div.create-instance-dialog__picker-result__box > div.create-instance-dialog__picker-result__button-container > button"))).click();
+                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(3) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--medium.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > section > button:nth-child(2) > div > div"))).click();
+                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(3) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--medium.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > div.oui-margin-medium-top.images-table-wrapper > section > div > div > table > tbody > tr:nth-child(5) > td.oui-table-shrink > input"))).click();
+                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(3) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--medium.oui-savant__Panel__animate > div.oui-savant__Panel--Footer > button.oui-button.oui-button-primary"))).click();
+                //点击网络
+                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(2) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--large.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > div.fullscreen-two-thirds-width > div > fieldset:nth-child(7) > div.oui-legend-wrapper.oui-flex.oui-flex-between.oui-flex-top > div.oui-margin-left.oui-flex.oui-flex-top.oui-flex- > button"))).click();
                 DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.platform-image-version")));
-                WebElement element;
-                if ("A1".equals(this.shapeType)) {
-                    DriverService.driver.findElement(By.cssSelector(".oui-margin-medium-left > .oui-button")).click();
-                    ((WebElement)DriverService.wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".oui-savant__card-radio-option-container:nth-child(3) > .oui-savant__card-radio-option")))).click();
-                    element = (WebElement)DriverService.wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".oui-margin-small-left:nth-child(1)")));
-                    DriverService.js.executeScript("arguments[0].scrollIntoView();", new Object[]{element});
-                    (new Actions(DriverService.driver)).moveToElement(element).pause(Duration.ofSeconds(1L)).click().pause(Duration.ofSeconds(1L)).perform();
-                    ((WebElement)DriverService.wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".oui-savant__Panel--medium > .oui-savant__Panel--Footer > .oui-button-primary")))).click();
-                }
-
-                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.platform-image-version")));
-                element = DriverService.driver.findElement(By.cssSelector(".oui-fieldset-default:nth-child(6) .oui-button"));
+                WebElement element = DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oui-fieldset-default:nth-child(6) .oui-button")));
                 DriverService.js.executeScript("arguments[0].scrollIntoView();arguments[0].click()", new Object[]{element});
-                Thread.sleep(2000L);
-                WebElement vcnId = DriverService.driver.findElement(By.name("vcnId"));
+                WebElement vcnId = DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("vcnId")));
                 DriverService.js.executeScript("arguments[0].scrollIntoView();", new Object[]{vcnId});
-                WebElement var10000 = (WebElement)DriverService.wait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(vcnId, By.xpath("//option[. = 'vcn-20220115-0032']")));
+                DriverService.wait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(vcnId, By.xpath("//option[. = 'vcn-20220115-0032']")));
                 vcnId.findElement(By.xpath("//option[. = 'vcn-20220115-0032']")).click();
-                Thread.sleep(1000L);
-                ((WebElement)DriverService.wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".oui-flex:nth-child(2) > .oui-margin-small-bottom:nth-child(3) .oui-form-label")))).click();
+
+                (DriverService.wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".oui-flex:nth-child(2) > .oui-margin-small-bottom:nth-child(3) .oui-form-label")))).click();
                 DriverService.driver.findElement(By.name("sshKey")).sendKeys(new CharSequence[]{"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAtURiRFDLWNmRgh5rxW1X/ko46eNIEAiIR3assoz7LGTYpwikAEIUM8ivvGB3R5OID3oTNnznHMuDHSBLIvuOHdB6lh8ej6myzYHq3tB32W2sUgsDGpcLsRa/HHEAceai4XrDm7etoPka3mf7yWE8x4YZHpgwjnmsd0GhMMtQcp/DywpWEvnIACRuWhY9Ygk5Rsxke2hczqtfa014VNB6WX6qvUhQANBNcOr9k/Gx6vuZ6IqPKGf/QQufa7+WlvLlfc6yUIK5dTIa5FhrogmM0Wqe65iuUegHoYlFErWFugMaSGvDW3SyA/tvAE7a6kCi7uF+xdb0Y1djhmEiZWyNHsItiZRuPmV+FOX6WhSDdpfJBJ9WV2+yiW3HZzFdGl4lQZQtDfEp4HS4ubg9C9v997zJtE/8pdqCVwkYAXReuPPPNeQ0TxkhllUBBVlyaKyou1xFbO8TqPY8eWpXcWnkqpLLGRg9KfHYRA7Adi3mO4FtutUbWUqtEdl86N/ImL0= mei@meijinnhundeMBP"});
             } finally {
                 LockService.DRIVERLOCK.unlock();
@@ -208,18 +188,11 @@ public class OracleA1V4 {
                     LockService.DRIVERLOCK.lock();
                     if (!DriverService.driver.getWindowHandle().equals(this.windowTag)) {
                         DriverService.driver.switchTo().window(this.windowTag);
-                        byte index;
-                        if ("firefox".equals(this.webBrowser)) {
-                            index = 1;
-                        } else {
-                            index = 0;
-                        }
-
-                        DriverService.wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(index));
-                        DriverService.driver.switchTo().parentFrame().switchTo().frame(index);
+                        DriverService.wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("#sandbox-compute-container")));
+                        DriverService.wait.until(ExpectedConditions.jsReturnsValue("return document.readyState='complete'"));
                     }
 
-                    DriverService.driver.findElement(By.cssSelector(".oui-button-primary")).click();
+                    DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oui-button-primary"))).click();
                     ++suc;
                     DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oui-savant__Panel--PanelMessageBlock")));
                     text = DriverService.driver.findElement(By.cssSelector(".oui-savant__Panel--PanelMessageBlock")).getText();
