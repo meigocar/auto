@@ -76,7 +76,7 @@ public class DriverService {
             }
 
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15L));
-            wait = new WebDriverWait(driver, Duration.ofSeconds(15L));
+            wait = new WebDriverWait(driver, Duration.ofSeconds(30L));
             js = (JavascriptExecutor)driver;
             inintWindow = driver.getWindowHandle();
         })).start();

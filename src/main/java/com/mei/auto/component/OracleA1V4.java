@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package com.mei.auto.component;
 
 import com.mei.auto.component.util.LockService;
@@ -23,6 +18,8 @@ import java.time.Duration;
 import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
+
+import static com.mei.auto.component.DriverService.*;
 
 @Service
 public class OracleA1V4 {
@@ -104,7 +101,7 @@ public class OracleA1V4 {
                         LOGGER.info(var10001.format(System.currentTimeMillis()) + " ******************** bye bye *****************");
                         var10000 = System.out;
                         var6 = dateFormat.format(System.currentTimeMillis());
-                        var10000.println(var6 + DriverService.driver.getCurrentUrl() + "  " + DriverService.driver.getTitle());
+                        var10000.println(var6 + driver.getCurrentUrl() + "  " + driver.getTitle());
                         this.close();
                         return;
                     }
@@ -113,11 +110,11 @@ public class OracleA1V4 {
                         LOGGER.info("oracelVps close try to lock");
                         LockService.DRIVERLOCK.lock();
                         LOGGER.info("oracelVps close locked");
-                        if (!DriverService.driver.getWindowHandle().equals(this.windowTag)) {
-                            DriverService.driver.switchTo().window(this.windowTag);
+                        if (!driver.getWindowHandle().equals(this.windowTag)) {
+                            driver.switchTo().window(this.windowTag);
                         }
 
-                        if (!DriverService.driver.getCurrentUrl().contains("cloud/sign-in.html")) {
+                        if (!driver.getCurrentUrl().contains("cloud/sign-in.html")) {
                             continue;
                         }
 
@@ -143,39 +140,42 @@ public class OracleA1V4 {
                 LOGGER.info("oracelVps oracleA1 try to lock");
                 LockService.DRIVERLOCK.lock();
                 LOGGER.info("oracelVps oracleA1 locked");
-                if (!DriverService.driver.getWindowHandle().equals(this.windowTag)) {
-                    DriverService.driver.switchTo().window(this.windowTag);
+                if (!driver.getWindowHandle().equals(this.windowTag)) {
+                    driver.switchTo().window(this.windowTag);
                 }
 
-                DriverService.driver.get("https://cloud.oracle.com/compute/instances/create?region=ap-singapore-1");
+                driver.get("https://cloud.oracle.com/compute/instances/create?region=ap-singapore-1");
 
                 //等待页面加载完成
-                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.region-header-name-text")));
-                DriverService.wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("#sandbox-compute-container")));
-                DriverService.wait.until(ExpectedConditions.jsReturnsValue("return document.readyState='complete'"));
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.region-header-name-text")));
+                wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("#sandbox-compute-container")));
+                wait.until(ExpectedConditions.jsReturnsValue("return document.readyState='complete'"));
 
                 //点击image
-                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(2) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--large.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > div.fullscreen-two-thirds-width > div > fieldset:nth-child(6) > div.oui-legend-wrapper.oui-flex.oui-flex-between.oui-flex-top > div.oui-margin-left.oui-flex.oui-flex-top.oui-flex- > button"))).click();
-                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(2) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--large.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > div.fullscreen-two-thirds-width > div > fieldset:nth-child(6) > div.oui__fieldset-content.oui-fieldset-content-top-zero-padding > div:nth-child(1) > div.create-instance-dialog__picker-result.ux-exp-field-wrapper > div.create-instance-dialog__picker-result__box > div.create-instance-dialog__picker-result__button-container > button"))).click();
-                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(3) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--medium.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > section > button:nth-child(2) > div > div"))).click();
-                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(3) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--medium.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > div.oui-margin-medium-top.images-table-wrapper > section > div > div > table > tbody > tr:nth-child(5) > td.oui-table-shrink > input"))).click();
-                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(3) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--medium.oui-savant__Panel__animate > div.oui-savant__Panel--Footer > button.oui-button.oui-button-primary"))).click();
+                wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(2) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--large.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > div.fullscreen-two-thirds-width > div > fieldset:nth-child(6) > div.oui-legend-wrapper.oui-flex.oui-flex-between.oui-flex-top > div.oui-margin-left.oui-flex.oui-flex-top.oui-flex- > button"))).click();
+                wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(2) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--large.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > div.fullscreen-two-thirds-width > div > fieldset:nth-child(6) > div.oui__fieldset-content.oui-fieldset-content-top-zero-padding > div:nth-child(1) > div.create-instance-dialog__picker-result.ux-exp-field-wrapper > div.create-instance-dialog__picker-result__box > div.create-instance-dialog__picker-result__button-container > button"))).click();
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(3) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--medium.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > section > button:nth-child(2) > div > div"))).click();
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(3) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--medium.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > div.oui-margin-medium-top.images-table-wrapper > section > div > div > table > tbody > tr:nth-child(5) > td.oui-table-shrink > input"))).click();
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(3) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--medium.oui-savant__Panel__animate > div.oui-savant__Panel--Footer > button.oui-button.oui-button-primary"))).click();
+
                 //点击网络
-                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(2) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--large.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > div.fullscreen-two-thirds-width > div > fieldset:nth-child(7) > div.oui-legend-wrapper.oui-flex.oui-flex-between.oui-flex-top > div.oui-margin-left.oui-flex.oui-flex-top.oui-flex- > button"))).click();
-                DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.platform-image-version")));
-                WebElement element = DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oui-fieldset-default:nth-child(6) .oui-button")));
-                DriverService.js.executeScript("arguments[0].scrollIntoView();arguments[0].click()", new Object[]{element});
-                WebElement vcnId = DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("vcnId")));
-                DriverService.js.executeScript("arguments[0].scrollIntoView();", new Object[]{vcnId});
-                DriverService.wait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(vcnId, By.xpath("//option[. = 'vcn-20220115-0032']")));
-                vcnId.findElement(By.xpath("//option[. = 'vcn-20220115-0032']")).click();
+                wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(2) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--large.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > div.fullscreen-two-thirds-width > div > fieldset:nth-child(7) > div.oui-legend-wrapper.oui-flex.oui-flex-between.oui-flex-top > div.oui-margin-left.oui-flex.oui-flex-top.oui-flex- > button"))).click();
+                //等待image版本号加载完成
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.platform-image-version")));
+                // 网络选择
+                WebElement vcnId = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("vcnId")));
+                DriverService.js.executeScript("arguments[0].scrollIntoView(true);", vcnId);
+                var dropdown = new Select(vcnId);
+                wait.until(driver -> dropdown.getOptions().size() >= 3);
+                dropdown.selectByIndex(2);
 
                 //等待子网的值加载完成
-                var dropdown = DriverService.driver.findElement(By.name("subnetId"));
-                DriverService.wait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(dropdown,By.xpath("//option[text()='subnet-20220115-0032（区域）']")));
+                var subnetIdDropdown = driver.findElement(By.name("subnetId"));
+                wait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(subnetIdDropdown,By.xpath("//option[text()='subnet-20220115-0032（区域）']")));
 
-                (DriverService.wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".oui-flex:nth-child(2) > .oui-margin-small-bottom:nth-child(3) .oui-form-label")))).click();
-                DriverService.driver.findElement(By.name("sshKey")).sendKeys(new CharSequence[]{"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAtURiRFDLWNmRgh5rxW1X/ko46eNIEAiIR3assoz7LGTYpwikAEIUM8ivvGB3R5OID3oTNnznHMuDHSBLIvuOHdB6lh8ej6myzYHq3tB32W2sUgsDGpcLsRa/HHEAceai4XrDm7etoPka3mf7yWE8x4YZHpgwjnmsd0GhMMtQcp/DywpWEvnIACRuWhY9Ygk5Rsxke2hczqtfa014VNB6WX6qvUhQANBNcOr9k/Gx6vuZ6IqPKGf/QQufa7+WlvLlfc6yUIK5dTIa5FhrogmM0Wqe65iuUegHoYlFErWFugMaSGvDW3SyA/tvAE7a6kCi7uF+xdb0Y1djhmEiZWyNHsItiZRuPmV+FOX6WhSDdpfJBJ9WV2+yiW3HZzFdGl4lQZQtDfEp4HS4ubg9C9v997zJtE/8pdqCVwkYAXReuPPPNeQ0TxkhllUBBVlyaKyou1xFbO8TqPY8eWpXcWnkqpLLGRg9KfHYRA7Adi3mO4FtutUbWUqtEdl86N/ImL0= mei@meijinnhundeMBP"});
+                //输入sshkey
+                wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".oui-flex:nth-child(2) > .oui-margin-small-bottom:nth-child(3) .oui-form-label"))).click();
+                driver.findElement(By.name("sshKey")).sendKeys(new CharSequence[]{"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAtURiRFDLWNmRgh5rxW1X/ko46eNIEAiIR3assoz7LGTYpwikAEIUM8ivvGB3R5OID3oTNnznHMuDHSBLIvuOHdB6lh8ej6myzYHq3tB32W2sUgsDGpcLsRa/HHEAceai4XrDm7etoPka3mf7yWE8x4YZHpgwjnmsd0GhMMtQcp/DywpWEvnIACRuWhY9Ygk5Rsxke2hczqtfa014VNB6WX6qvUhQANBNcOr9k/Gx6vuZ6IqPKGf/QQufa7+WlvLlfc6yUIK5dTIa5FhrogmM0Wqe65iuUegHoYlFErWFugMaSGvDW3SyA/tvAE7a6kCi7uF+xdb0Y1djhmEiZWyNHsItiZRuPmV+FOX6WhSDdpfJBJ9WV2+yiW3HZzFdGl4lQZQtDfEp4HS4ubg9C9v997zJtE/8pdqCVwkYAXReuPPPNeQ0TxkhllUBBVlyaKyou1xFbO8TqPY8eWpXcWnkqpLLGRg9KfHYRA7Adi3mO4FtutUbWUqtEdl86N/ImL0= mei@meijinnhundeMBP"});
             } finally {
                 LockService.DRIVERLOCK.unlock();
                 LOGGER.info("oracleVps oracleA1 release Lock");
@@ -191,16 +191,16 @@ public class OracleA1V4 {
                 try {
                     LOGGER.info("oracleVps press button try lock");
                     LockService.DRIVERLOCK.lock();
-                    if (!DriverService.driver.getWindowHandle().equals(this.windowTag)) {
-                        DriverService.driver.switchTo().window(this.windowTag);
-                        DriverService.wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("#sandbox-compute-container")));
-                        DriverService.wait.until(ExpectedConditions.jsReturnsValue("return document.readyState='complete'"));
+                    if (!driver.getWindowHandle().equals(this.windowTag)) {
+                        driver.switchTo().window(this.windowTag);
+                        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("#sandbox-compute-container")));
+                        wait.until(ExpectedConditions.jsReturnsValue("return document.readyState='complete'"));
                     }
 
-                    DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oui-button-primary"))).click();
+                    wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".oui-button-primary"))).click();
                     ++suc;
-                    DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oui-savant__Panel--PanelMessageBlock")));
-                    text = DriverService.driver.findElement(By.cssSelector(".oui-savant__Panel--PanelMessageBlock")).getText();
+                    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".oui-savant__Panel--PanelMessageBlock")));
+                    text = driver.findElement(By.cssSelector(".oui-savant__Panel--PanelMessageBlock")).getText();
                 } finally {
                     LockService.DRIVERLOCK.unlock();
                     LOGGER.info("oracleVps press button release lock");
@@ -221,7 +221,7 @@ public class OracleA1V4 {
                 long hours = pastMins / 60L;
                 long mins = pastMins - hours * 60L;
                 LOGGER.info(String.format("oracleVps, %s, past: %d:%d, cost:%d, suc:%d || fail:%d || win:%d", dateFormat.format(System.currentTimeMillis()), hours, mins, (now - this.procPreTime) / 1000L, suc, fai, win));
-                Thread.sleep((long)((new Random()).nextInt(this.reCommitWaitTime) + (Integer)this.paramsMap.get("baseTime")));
+                Thread.sleep(((new Random()).nextInt(this.reCommitWaitTime) + (Integer)this.paramsMap.get("baseTime")));
             }
 
         }
@@ -234,8 +234,8 @@ public class OracleA1V4 {
             LOGGER.info("oracelVps close try to lock");
             LockService.DRIVERLOCK.lock();
             LOGGER.info("oracelVps close locked");
-            DriverService.driver.switchTo().window(this.windowTag).close();
-            DriverService.driver.switchTo().window(DriverService.inintWindow);
+            driver.switchTo().window(this.windowTag).close();
+            driver.switchTo().window(inintWindow);
             LOGGER.info("关闭 oracle vps 浏览器");
         } finally {
             LockService.DRIVERLOCK.unlock();
@@ -253,9 +253,9 @@ public class OracleA1V4 {
             LOGGER.info("oracelVps windowInit try to lock");
             LockService.DRIVERLOCK.lock();
             LOGGER.info("oracelVps windowInit locked");
-            this.windowTag = DriverService.driver.switchTo().newWindow(WindowType.TAB).getWindowHandle();
-            DriverService.driver.get("https://www.oracle.com/cloud/sign-in.html");
-            DriverService.driver.manage().window().setSize(new Dimension(1400, 1600));
+            this.windowTag = driver.switchTo().newWindow(WindowType.TAB).getWindowHandle();
+            driver.get("https://www.oracle.com/cloud/sign-in.html");
+            driver.manage().window().setSize(new Dimension(1400, 1600));
         } finally {
             LockService.DRIVERLOCK.unlock();
             LOGGER.info("oracelVps windowInit release Lock");
@@ -271,32 +271,32 @@ public class OracleA1V4 {
                 LOGGER.info("oracelVps login try to lock");
                 LockService.DRIVERLOCK.lock();
                 LOGGER.info("oracelVps login locked");
-                if (!DriverService.driver.getWindowHandle().equals(this.windowTag)) {
-                    DriverService.driver.switchTo().window(this.windowTag);
+                if (!driver.getWindowHandle().equals(this.windowTag)) {
+                    driver.switchTo().window(this.windowTag);
                 }
 
-                DriverService.driver.get("https://www.oracle.com/cloud/sign-in.html");
-                WebElement cloudAccountName = DriverService.wait.until(ExpectedConditions.elementToBeClickable(By.id("cloudAccountName")));
+                driver.get("https://www.oracle.com/cloud/sign-in.html");
+                WebElement cloudAccountName = wait.until(ExpectedConditions.elementToBeClickable(By.id("cloudAccountName")));
                 cloudAccountName.clear();
                 cloudAccountName.sendKeys(new CharSequence[]{"mjc88"});
                 LOGGER.info("login step 1 before");
-                DriverService.wait.until(ExpectedConditions.elementToBeClickable(By.id("cloudAccountButton"))).click();
+                wait.until(ExpectedConditions.elementToBeClickable(By.id("cloudAccountButton"))).click();
                 LOGGER.info("login step 1 success");
                 Thread.sleep(3000L);
-                LOGGER.info("pageTitle:" + DriverService.driver.getTitle());
-                if (!DriverService.driver.getCurrentUrl().contains("cloud.oracle.com/?tenant=mjc88&region=ap-singapore-1")) {
-                    DriverService.driver.switchTo().parentFrame();
+                LOGGER.info("pageTitle:" + driver.getTitle());
+                if (!driver.getCurrentUrl().contains("cloud.oracle.com/?tenant=mjc88&region=ap-singapore-1")) {
+                    driver.switchTo().parentFrame();
                     LOGGER.info("login steping 2 before");
-                    WebDriverWait wait = new WebDriverWait(DriverService.driver, Duration.ofSeconds(30L));
+                    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30L));
                     wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("submit-federation")));
                     LOGGER.info("login steping 2");
-                    DriverService.driver.findElement(By.id("submit-federation")).submit();
+                    driver.findElement(By.id("submit-federation")).submit();
                     LOGGER.info("login step 2 sucess");
                     wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("idcs-signin-basic-signin-form-username")));
-                    DriverService.driver.findElement(By.id("idcs-signin-basic-signin-form-username")).sendKeys(new CharSequence[]{"mjc.88@126.com"});
-                    DriverService.driver.findElement(By.id("idcs-signin-basic-signin-form-password|input")).sendKeys(new CharSequence[]{"JInchun@4515"});
+                    driver.findElement(By.id("idcs-signin-basic-signin-form-username")).sendKeys(new CharSequence[]{"mjc.88@126.com"});
+                    driver.findElement(By.id("idcs-signin-basic-signin-form-password|input")).sendKeys(new CharSequence[]{"JInchun@4515"});
                     LOGGER.info("login enter username,pass");
-                    DriverService.driver.findElement(By.cssSelector("#idcs-signin-basic-signin-form-submit .oj-button-label")).click();
+                    driver.findElement(By.cssSelector("#idcs-signin-basic-signin-form-submit .oj-button-label")).click();
                     LOGGER.info("login finish");
                     Thread.sleep(2000L);
                     wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#home\\:quick-actions\\:item\\:compute-instance")));
@@ -328,22 +328,22 @@ public class OracleA1V4 {
                     LockService.DRIVERLOCK.lock();
                     LOGGER.info("oracelVps logout locked");
                     LOGGER.info("session logout begin");
-                    if (!DriverService.driver.getWindowHandle().equals(this.windowTag)) {
-                        DriverService.driver.switchTo().window(this.windowTag);
+                    if (!driver.getWindowHandle().equals(this.windowTag)) {
+                        driver.switchTo().window(this.windowTag);
                     }
 
-                    DriverService.driver.get("https://cloud.oracle.com/?region=ap-singapore-1");
-                    DriverService.driver.switchTo().parentFrame();
-                    DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-circle-rect")));
-                    WebElement userE = DriverService.driver.findElement(By.id("user-circle-rect"));
+                    driver.get("https://cloud.oracle.com/?region=ap-singapore-1");
+                    driver.switchTo().parentFrame();
+                    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("user-circle-rect")));
+                    WebElement userE = driver.findElement(By.id("user-circle-rect"));
                     userE.click();
-                    DriverService.driver.findElement(By.id("user-menu-sign-out")).click();
-                    DriverService.wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".form-federated > h4")));
+                    driver.findElement(By.id("user-menu-sign-out")).click();
+                    wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".form-federated > h4")));
                     Thread.sleep(1000L);
                     LOGGER.info("session logout finish");
                     return;
                 } catch (Exception var6) {
-                    String curl = DriverService.driver.getCurrentUrl();
+                    String curl = driver.getCurrentUrl();
                     if (curl != null && curl.contains("sign-in.html")) {
                         LOGGER.info("session logout had allready finished");
                         return;
@@ -358,6 +358,6 @@ public class OracleA1V4 {
     }
 
     public WebDriver getDriver() {
-        return DriverService.driver;
+        return driver;
     }
 }
