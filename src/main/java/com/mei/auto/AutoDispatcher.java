@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class AutoDispatcher {
     ExecutorService executorService = Executors.newFixedThreadPool(10);
+
     @Resource
     OracleA1V4 oracleA1V4;
     @Resource

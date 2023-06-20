@@ -4,6 +4,7 @@ import com.mei.auto.component.util.LockService;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.Resource;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -159,7 +160,10 @@ public class OracleA1V4 {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(3) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--medium.oui-savant__Panel__animate > div.oui-savant__Panel--Footer > button.oui-button.oui-button-primary"))).click();
 
                 //点击网络
-                wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(2) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--large.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > div.fullscreen-two-thirds-width > div > fieldset:nth-child(7) > div.oui-legend-wrapper.oui-flex.oui-flex-between.oui-flex-top > div.oui-margin-left.oui-flex.oui-flex-top.oui-flex- > button"))).click();
+                var networkElement = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#oui-savant__viewstack__container > div:nth-child(2) > div:nth-child(2) > div > div.oui-savant__Panel.oui-savant__Panel--large.oui-savant__Panel__animate > div.oui-savant__Panel--Contents > div.fullscreen-two-thirds-width > div > fieldset:nth-child(7) > div.oui-legend-wrapper.oui-flex.oui-flex-between.oui-flex-top > div.oui-margin-left.oui-flex.oui-flex-top.oui-flex- > button")));
+                js.executeScript("arguments[0].scrollIntoView(true);", networkElement);
+                new Actions(driver).moveToElement(networkElement).click().perform();
+
                 //等待image版本号加载完成
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.platform-image-version")));
                 // 网络选择
@@ -288,7 +292,7 @@ public class OracleA1V4 {
                     driver.switchTo().parentFrame();
                     LOGGER.info("login steping 2 before");
                     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30L));
-                    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("submit-federation")));
+                    wait.until(ExpectedConditions.elementToBeClickable(By.id("submit-federation")));
                     LOGGER.info("login steping 2");
                     driver.findElement(By.id("submit-federation")).submit();
                     LOGGER.info("login step 2 sucess");
